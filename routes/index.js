@@ -1,11 +1,16 @@
 const express = require("express");
+const db = require("../db/mongoose");
 const router = express.Router();
 
 /* GET home page. */
-router.get("/", function (req, res, next) {
+router.get("/", async function (req, res, next) {
+  const messageArr = await db.getMessages();
+
   res.render("index", {
     layout: "layouts/main",
-    title: "Express",
+    title: "Maxy Message Board",
+    header: "All Messages",
+    messages: messageArr,
   });
 });
 

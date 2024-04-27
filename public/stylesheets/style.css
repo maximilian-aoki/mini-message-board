@@ -4,5 +4,29 @@ body {
 }
 
 a {
-  color: #00B7FF;
+  color: #00b7ff;
+}
+
+ul {
+  max-width: 30rem;
+  display: grid;
+  gap: 1rem;
+}
+
+li {
+  list-style-type: none;
+  padding: 1rem;
+  border-radius: 1rem;
+  background-color: rgb(239, 239, 239);
+}
+
+form {
+  display: grid;
+  gap: 1.5rem;
+  max-width: 30rem;
+}
+
+form > div {
+  display: grid;
+  gap: 0.5rem;
 }
